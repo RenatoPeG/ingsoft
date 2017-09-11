@@ -20,6 +20,16 @@ def text_render(text, font):
     textSurface = font.render(text, True, black)
     return textSurfface, textSurfcae.get_rect()
 
+def load_song(name):
+    fullname = os.path.join('recursos')
+    fullname = os.path.join(fullname, name)
+    try:
+        song = pygame.mixer.music.load(fullname)
+    except pygame.error as message:
+        print('Cannot load audio file:', fullname)
+        raise SystemExit(message)
+    return song
+
 def load_image(name, colorkey=None):
     fullname = os.path.join('recursos')
     fullname = os.path.join(fullname, name)
@@ -62,6 +72,11 @@ class Main:
             textRect.center = ((display_width / 2), (display_height / 2))
             self.display.blit(textSurface, textRect)
             '''
+
+            #carga cancion
+            song = load_song('quiero_amanecer.mp3')
+            pygame.mixer.music.play()
+
             #muestra la imagen
             logoSurf, logoRect = load_image('logo.png')
             y = display_height * 0.7

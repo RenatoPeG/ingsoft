@@ -14,6 +14,8 @@ green = (0, 200, 0)
 blue = (0, 0 , 200)
 bright_green = (0, 255, 0)
 bright_red = (255, 0, 0)
+bright_orange = (255, 100, 10)
+blue_bkg = (5, 116, 218)
 
 
 def text_render(text, font):
@@ -28,7 +30,6 @@ def load_song(name):
     except pygame.error as message:
         print('Cannot load audio file:', fullname)
         raise SystemExit(message)
-    return song
 
 def load_image(name, colorkey=None):
     fullname = os.path.join('recursos')
@@ -54,8 +55,9 @@ class Main:
         self.display = pygame.display.set_mode((self.width, self.height))
         self.clock = pygame.time.Clock()
         pygame.display.set_caption('Cholo Fighter')
-
-
+        self.display.fill(white)
+        load_song('quiero_amanecer.mp3')
+        pygame.mixer.music.play(-1, 0.0)
 
     def game_Menu(self):
         while 1:
@@ -73,9 +75,9 @@ class Main:
             self.display.blit(textSurface, textRect)
             '''
 
-            #carga cancion
-            song = load_song('quiero_amanecer.mp3')
-            pygame.mixer.music.play()
+            #fondo
+            pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
+            pygame.draw.rect(self.display, blue_bkg, (30, 185, 1140, 485))
 
             #muestra la imagen
             logoSurf, logoRect = load_image('logo.png')
@@ -84,14 +86,15 @@ class Main:
             self.display.blit(logoSurf, logoRect)
 
             #botones
-            self.button('Un Jugador', 150, 10, 250, 50, black, bright_green, self.game_quit)
-            self.button('Multijugador', 150, 70, 250, 50, black, bright_green, self.game_quit)
-            self.button('Historia', 150, 130, 250, 50, black, bright_green, self.game_quit)
-            self.button('Salir', 150, 190, 250, 50, black, bright_red, self.game_quit)
+            self.button('Un Jugador', 150, 45, 250, 50, black, bright_green, self.game_quit)
+            self.button('Musica', 800, 45, 250, 50, black, bright_orange, self.music_onoff)
+            #self.button('Multijugador', 150, 70, 250, 50, black, bright_green, self.game_quit)
+            #self.button('Historia', 150, 130, 250, 50, black, bright_green, self.game_quit)
+            self.button('Salir', 150, 115, 250, 50, black, bright_red, self.game_quit)
 
             #tasa de refresco
             pygame.display.update()
-            self.clock.tick()
+            self.clock.tick(20)
 
     def button(self, text, x, y, width, height, inColor, acColor, action=None):
         mouse = pygame.mouse.get_pos()
@@ -109,6 +112,21 @@ class Main:
         textRect = textSurf.get_rect()
         textRect.center = ((x + (width / 2)), (y + (height / 2)))
         self.display.blit(textSurf, textRect)
+
+    def music_onoff(self):
+        if pygame.mixer.music.get_busy():
+            print(pygame.mixer.music.get_busy())
+            pygame.mixer.music.stop()
+            pausa = pygame.mixer.music.get_pos()
+        else:
+            print(pygame.mixer.music.get_busy())
+            pygame.mixer.music.play(-1)
+        '''if tiempo > pausa:
+            pygame.mixer.music.pause()
+            pausa = pygame.mixer.music.get_pos()
+            print(tiempo, pausa)
+        elif tiempo == pausa:
+            pygame.mixer.music.unpause()'''
 
     def game_quit(self):
         pygame.quit()

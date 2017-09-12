@@ -77,7 +77,7 @@ class Main:
 
             #fondo
             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
-            pygame.draw.rect(self.display, blue_bkg, (30, 185, 1140, 485))
+            #pygame.draw.rect(self.display, blue_bkg, (30, 185, 1140, 485))
 
             #muestra la imagen
             logoSurf, logoRect = load_image('logo.png')
@@ -107,7 +107,8 @@ class Main:
         else:
             pygame.draw.rect(self.display, inColor, (x, y, width, height))
 
-        fontBtn = pygame.font.SysFont('dolphins', 35)
+        #fontBtn = pygame.font.SysFont('dolphins', 35)
+        fontBtn = pygame.font.Font(os.path.join('recursos', 'dolphins.ttf'), 35)
         textSurf = fontBtn.render(text, True, white)
         textRect = textSurf.get_rect()
         textRect.center = ((x + (width / 2)), (y + (height / 2)))

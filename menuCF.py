@@ -121,12 +121,6 @@ class Main:
         else:
             print(pygame.mixer.music.get_busy())
             pygame.mixer.music.play(-1)
-        '''if tiempo > pausa:
-            pygame.mixer.music.pause()
-            pausa = pygame.mixer.music.get_pos()
-            print(tiempo, pausa)
-        elif tiempo == pausa:
-            pygame.mixer.music.unpause()'''
 
     def game_quit(self):
         pygame.quit()

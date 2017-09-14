@@ -23,14 +23,16 @@ def text_render(text, font):
     text_surface = font.render(text, True, black)
     return text_surface, text_surface.get_rect()
 
+
 def load_song(name):
     fullname = os.path.join('recursos')
     fullname = os.path.join(fullname, name)
     try:
-        song = pygame.mixer.music.load(fullname)
+        pygame.mixer.music.load(fullname)
     except pygame.error as message:
         print('Cannot load audio file:', fullname)
         raise SystemExit(message)
+
 
 def load_image(name, colorkey=None):
     fullname = os.path.join('recursos')
@@ -38,18 +40,28 @@ def load_image(name, colorkey=None):
     try:
         image = pygame.image.load(fullname)
     except pygame.error as message:
-        print ('Cannot load image:', fullname)
+        print('Cannot load image:', fullname)
         raise SystemExit(message)
     image = image.convert()
     if colorkey is not None:
         if colorkey is -1:
-            colorkey = image.get_at((0,0))
+            colorkey = image.get_at((0, 0))
         image.set_colorkey(colorkey, RLEACCEL)
     return image, image.get_rect()
 
 
+def music_onoff():
+    if pygame.mixer.music.get_busy():
+        print(pygame.mixer.music.get_busy())
+        pygame.mixer.music.stop()
+        pausa = pygame.mixer.music.get_pos()
+    else:
+        print(pygame.mixer.music.get_busy())
+        pygame.mixer.music.play(-1)
+
+
 class Main:
-    def __init__(self, width = display_width, height = display_height):
+    def __init__(self, width=display_width, height=display_height):
         pygame.init()
         self.width = width
         self.height = height
@@ -60,7 +72,7 @@ class Main:
         load_song('quiero_amanecer.mp3')
         pygame.mixer.music.play(-1, 0.0)
 
-    def game_Menu(self):
+    def game_menu(self):
         while 1:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -76,59 +88,51 @@ class Main:
             self.display.blit(textSurface, textRect)
             '''
 
-            #fondo
+            # fondo
             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
-            #pygame.draw.rect(self.display, blue_bkg, (30, 185, 1140, 485))
+            # pygame.draw.rect(self.display, blue_bkg, (30, 185, 1140, 485))
 
-            #muestra la imagen
-            logoSurf, logoRect = load_image('logo.png')
+            # muestra la imagen
+            logo_surf, logo_rect = load_image('logo.png')
             y = display_height * 0.7
-            logoRect.center = ((display_width / 2, y))
-            self.display.blit(logoSurf, logoRect)
+            logo_rect.center = ((display_width / 2, y))
+            self.display.blit(logo_surf, logo_rect)
 
-            #botones
+            # botones
             self.button('Un Jugador', 150, 45, 250, 50, black, bright_green, self.game_quit)
-            self.button('Musica', 800, 45, 250, 50, black, bright_orange, self.music_onoff)
-            #self.button('Multijugador', 150, 70, 250, 50, black, bright_green, self.game_quit)
-            #self.button('Historia', 150, 130, 250, 50, black, bright_green, self.game_quit)
+            self.button('Musica', 800, 45, 250, 50, black, bright_orange, music_onoff)
+            # self.button('Multijugador', 150, 70, 250, 50, black, bright_green, self.game_quit)
+            # self.button('Historia', 150, 130, 250, 50, black, bright_green, self.game_quit)
             self.button('Salir', 150, 115, 250, 50, black, bright_red, self.game_quit)
 
-            #tasa de refresco
+            # tasa de refresco
             pygame.display.update()
             self.clock.tick(20)
 
-    def button(self, text, x, y, width, height, inColor, acColor, action=None):
+    def button(self, text, x, y, width, height, in_color, ac_color, action=None):
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
 
-        if x+width > mouse[0] > x and y+height > mouse[1] > y:
-            pygame.draw.rect(self.display, acColor, (x, y, width, height))
+        if x + width > mouse[0] > x and y + height > mouse[1] > y:
+            pygame.draw.rect(self.display, ac_color, (x, y, width, height))
             if click[0] == 1 and action is not None:
-                action ()
+                action()
         else:
-            pygame.draw.rect(self.display, inColor, (x, y, width, height))
+            pygame.draw.rect(self.display, in_color, (x, y, width, height))
 
-        #fontBtn = pygame.font.SysFont('dolphins', 35)
-        fontBtn = pygame.font.Font(os.path.join('recursos', 'dolphins.ttf'), 35)
-        textSurf = fontBtn.render(text, True, white)
-        textRect = textSurf.get_rect()
-        textRect.center = ((x + (width / 2)), (y + (height / 2)))
-        self.display.blit(textSurf, textRect)
+        # font_btn = pygame.font.SysFont('dolphins', 35)
+        font_btn = pygame.font.Font(os.path.join('recursos', 'dolphins.ttf'), 35)
+        text_surf = font_btn.render(text, True, white)
+        text_rect = text_surf.get_rect()
+        text_rect.center = ((x + (width / 2)), (y + (height / 2)))
+        self.display.blit(text_surf, text_rect)
 
-    def music_onoff(self):
-        if pygame.mixer.music.get_busy():
-            print(pygame.mixer.music.get_busy())
-            pygame.mixer.music.stop()
-            pausa = pygame.mixer.music.get_pos()
-        else:
-            print(pygame.mixer.music.get_busy())
-            pygame.mixer.music.play(-1)
-
-    def game_quit(self):
+    @staticmethod
+    def game_quit():
         pygame.quit()
         quit()
 
 
 if __name__ == '__main__':
     MainWindow = Main()
-    MainWindow.game_Menu()
+    MainWindow.game_menu()

@@ -1,5 +1,5 @@
 import os
-import sys
+# import sys
 import pygame
 from pygame.locals import *
 
@@ -19,9 +19,13 @@ bright_orange = (255, 100, 10)
 blue_bkg = (5, 116, 218)
 
 
-def text_render(text, font):
-    text_surface = font.render(text, True, black)
-    return text_surface, text_surface.get_rect()
+def text_render(text, font, size):
+    # font_btn = pygame.font.SysFont('dolphins', 35)
+    font_btn = pygame.font.Font(os.path.join('recursos', font), size)
+    text_surf = font_btn.render(text, True, white)
+    text_rect = text_surf.get_rect()
+
+    return text_surf, text_rect
 
 
 def load_song(name):
@@ -53,11 +57,11 @@ def load_image(name, colorkey=None):
 def music_onoff():
     if pygame.mixer.music.get_busy():
         print(pygame.mixer.music.get_busy())
-        pygame.mixer.music.stop()
-        pausa = pygame.mixer.music.get_pos()
+        pygame.mixer.music.pause()
+        pygame.mixer.music.get_pos()
     else:
         print(pygame.mixer.music.get_busy())
-        pygame.mixer.music.play(-1)
+        pygame.mixer.music.unpause()
 
 
 class Main:
@@ -79,37 +83,43 @@ class Main:
                     pygame.quit()
                     quit()
 
-            '''TEXTO EN MEDIO DE PANTALLA
-            self.display.fill(white)
-            font = pygame.font.Font('freesansbold.ttf', 115)
-            textSurface = font.render('Cholo Fighter', True, black)
-            textRect = textSurface.get_rect()
-            textRect.center = ((display_width / 2), (display_height / 2))
-            self.display.blit(textSurface, textRect)
-            '''
-
             # fondo
             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
             # pygame.draw.rect(self.display, blue_bkg, (30, 185, 1140, 485))
 
             # muestra la imagen
             logo_surf, logo_rect = load_image('logo.png')
-            y = display_height * 0.7
-            logo_rect.center = ((display_width / 2, y))
+            y = display_height * 0.65
+            logo_rect.center = (display_width / 2, y)
             self.display.blit(logo_surf, logo_rect)
 
             # botones
-            self.button('Un Jugador', 150, 45, 250, 50, black, bright_green, self.game_quit)
-            self.button('Musica', 800, 45, 250, 50, black, bright_orange, music_onoff)
-            # self.button('Multijugador', 150, 70, 250, 50, black, bright_green, self.game_quit)
-            # self.button('Historia', 150, 130, 250, 50, black, bright_green, self.game_quit)
-            self.button('Salir', 150, 115, 250, 50, black, bright_red, self.game_quit)
+            self.button('Jugar', 150, 45, 250, 50, black, bright_green, 35, self.game_selection)
+            self.button('Musica', 800, 45, 250, 50, black, bright_orange, 35, music_onoff)
+            self.button('Salir', 150, 115, 250, 50, black, bright_red, 35, self.game_quit)
 
             # tasa de refresco
             pygame.display.update()
             self.clock.tick(20)
 
-    def button(self, text, x, y, width, height, in_color, ac_color, action=None):
+    def game_selection(self):
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
+
+            pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
+
+            self.button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
+            text_surf, text_rect = text_render("Seleccion de Personajes", 'dolphins.ttf', 70)
+            text_rect.center = (self.width / 2, 100)
+            self.display.blit(text_surf, text_rect)
+
+            pygame.display.update()
+            self.clock.tick(20)
+
+    def button(self, text, x, y, width, height, in_color, ac_color, size, action=None):
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
 
@@ -120,10 +130,7 @@ class Main:
         else:
             pygame.draw.rect(self.display, in_color, (x, y, width, height))
 
-        # font_btn = pygame.font.SysFont('dolphins', 35)
-        font_btn = pygame.font.Font(os.path.join('recursos', 'dolphins.ttf'), 35)
-        text_surf = font_btn.render(text, True, white)
-        text_rect = text_surf.get_rect()
+        text_surf, text_rect = text_render(text, 'dolphins.ttf', size)
         text_rect.center = ((x + (width / 2)), (y + (height / 2)))
         self.display.blit(text_surf, text_rect)
 

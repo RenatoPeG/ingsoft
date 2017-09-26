@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="773cf4cb-c6e0-48a1-a811-2d69f24b35d0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/menu/static/images/judas_ico.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/menu/static/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/menu/static/seleccion_personaje.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/menu/templates/menu/seleccion_personaje.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/menu/templates/menu/menu.css" afterPath="$PROJECT_DIR$/menu/static/menu.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu/models.py" afterPath="$PROJECT_DIR$/menu/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu/templates/menu/menu.html" afterPath="$PROJECT_DIR$/menu/templates/menu/menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu/urls.py" afterPath="$PROJECT_DIR$/menu/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/menu/views.py" afterPath="$PROJECT_DIR$/menu/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />

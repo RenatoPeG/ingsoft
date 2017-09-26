@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  font-family: "Dolphins", sans-serif;
+  font-size: 3em
+}
+
+.mySlides {
+  display: none;
+}
+
+#body {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btnLocal {
+  background-color: black;
+  border-color: black;
+  font-size: 100%
+}
+
+#primerFondo {
+  background-color: white
+}
+
+#segundoFondo {
+  background-color: black;
+  padding: 30px
+}

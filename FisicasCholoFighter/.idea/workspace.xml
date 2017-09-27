@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fbc74f94-3cae-4bf9-8b71-d282239a792d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/FisicasCholoFighter.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../server/menu/static/images/chihuahua_ico.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/db.sqlite3" afterPath="$PROJECT_DIR$/../server/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Cholo_Fighter/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Cholo_Fighter/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fisicas.py" afterPath="$PROJECT_DIR$/fisicas.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../server/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/menu/static/seleccion_personaje.css" afterPath="$PROJECT_DIR$/../server/menu/static/seleccion_personaje.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../server/menu/templates/menu/seleccion_personaje.html" afterPath="$PROJECT_DIR$/../server/menu/templates/menu/seleccion_personaje.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />

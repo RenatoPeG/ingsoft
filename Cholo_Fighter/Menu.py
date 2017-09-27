@@ -97,6 +97,7 @@ class Main:
             self.button('Jugar', 150, 45, 250, 50, black, bright_green, 35, self.game_selection)
             self.button('Musica', 800, 45, 250, 50, black, bright_orange, 35, music_onoff)
             self.button('Salir', 150, 115, 250, 50, black, bright_red, 35, self.game_quit)
+            self.button('Opciones', 800, 115, 250, 50, black, bright_orange, 35, self.game_options)
 
             # tasa de refresco
             pygame.display.update()
@@ -118,6 +119,24 @@ class Main:
 
             pygame.display.update()
             self.clock.tick(20)
+
+
+    def game_options(self):
+         while True:
+             for event in pygame.event.get():
+                 if event.type == pygame.QUIT:
+                     pygame.quit()
+                     quit()
+
+             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
+
+             self.button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
+             text_surf, text_rect = text_render("Opciones", 'dolphins.ttf', 70)
+             text_rect.center = (self.width / 2, 100)
+             self.display.blit(text_surf, text_rect)
+
+             pygame.display.update()
+             self.clock.tick(20)
 
     def button(self, text, x, y, width, height, in_color, ac_color, size, action=None):
         mouse = pygame.mouse.get_pos()

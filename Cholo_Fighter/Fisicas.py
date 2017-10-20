@@ -2,6 +2,7 @@ import pygame
 import os
 from pygame.locals import *
 from pygame.sprite import Sprite
+from Boton import *
 
 
 black = (0, 0, 0)
@@ -96,23 +97,7 @@ ataque = Ataque()
 fondo = pygame.image.load("Imagenes/AMOR.jpg").convert()
 
 
-def button(text, x, y, width, height, in_color, ac_color, size, action=None):
-    mouse = pygame.mouse.get_pos()
-    click = pygame.mouse.get_pressed()
-
-    if x + width > mouse[0] > x and y + height > mouse[1] > y:
-        pygame.draw.rect(display, ac_color, (x, y, width, height))
-        if click[0] == 1 and action is not None:
-            action()
-    else:
-        pygame.draw.rect(display, in_color, (x, y, width, height))
-
-    text_surf, text_rect = text_render(text, 'dolphins.ttf', size)
-    text_rect.center = ((x + (width / 2)), (y + (height / 2)))
-    display.blit(text_surf, text_rect)
-
-
-class Main:
+class MainGame:
     def __init__(self, width=display_width, height=display_height):
         pygame.init()
         self.width = width
@@ -134,7 +119,9 @@ class Main:
             display.blit(ataque.image, ataque.rect)
 
             # botones
-            button('Salir', 1010, 25, 125, 50, black, bright_red, 35, self.game_quit)
+            # button('Salir', 1010, 25, 125, 50, black, bright_red, 35, self.game_quit)
+            button = Button('Salir', 1010, 25, 125, 50, black, bright_red, 35, self.game_quit)
+            button.draw_button(display)
 
             # tasa de refresco
             pygame.display.update()
@@ -147,5 +134,5 @@ class Main:
 
 
 if __name__ == '__main__':
-    MainWindow = Main()
+    MainWindow = MainGame()
     MainWindow.game_menu()

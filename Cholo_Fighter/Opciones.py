@@ -5,8 +5,7 @@ import os
 
 #Crear funcion que modifique control
 def modificar_control():
-
-
+    pass
 #Atar funcion a los botones de configuracion de la pantalla
 
 

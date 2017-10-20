@@ -2,6 +2,10 @@ import os
 # import sys
 import pygame
 from pygame.locals import *
+from Fisicas import *
+from TextMgmt import *
+from Music import *
+from Imagen import *
 
 pygame.init()
 
@@ -17,51 +21,6 @@ bright_green = (0, 255, 0)
 bright_red = (255, 0, 0)
 bright_orange = (255, 100, 10)
 blue_bkg = (5, 116, 218)
-
-
-def text_render(text, font, size):
-    # font_btn = pygame.font.SysFont('dolphins', 35)
-    font_btn = pygame.font.Font(os.path.join('recursos', font), size)
-    text_surf = font_btn.render(text, True, white)
-    text_rect = text_surf.get_rect()
-
-    return text_surf, text_rect
-
-
-def load_song(name):
-    fullname = os.path.join('recursos')
-    fullname = os.path.join(fullname, name)
-    try:
-        pygame.mixer.music.load(fullname)
-    except pygame.error as message:
-        print('Cannot load audio file:', fullname)
-        raise SystemExit(message)
-
-
-def load_image(name, colorkey=None):
-    fullname = os.path.join('recursos')
-    fullname = os.path.join(fullname, name)
-    try:
-        image = pygame.image.load(fullname)
-    except pygame.error as message:
-        print('Cannot load image:', fullname)
-        raise SystemExit(message)
-    image = image.convert()
-    if colorkey is not None:
-        if colorkey is -1:
-            colorkey = image.get_at((0, 0))
-        image.set_colorkey(colorkey, RLEACCEL)
-    return image, image.get_rect()
-
-
-def music_onoff():
-    if pygame.mixer.music.get_busy():
-        print(pygame.mixer.music.get_busy())
-        pygame.mixer.music.pause()
-        pygame.mixer.music.get_pos()
-    else:
-        print(pygame.mixer.music.get_busy())
-        pygame.mixer.music.unpause()
 
 
 class Main:
@@ -94,10 +53,14 @@ class Main:
             self.display.blit(logo_surf, logo_rect)
 
             # botones
-            self.button('Jugar', 150, 45, 250, 50, black, bright_green, 35, self.game_selection)
-            self.button('Musica', 800, 45, 250, 50, black, bright_orange, 35, music_onoff)
-            self.button('Salir', 150, 115, 250, 50, black, bright_red, 35, self.game_quit)
-            self.button('Opciones', 800, 115, 250, 50, black, bright_orange, 35, self.game_options)
+            button = Button('Jugar', 150, 45, 250, 50, black, bright_green, 35, self.game_selection)
+            button.draw_button(self.display)
+            button = Button('Musica', 800, 45, 250, 50, black, bright_orange, 35, music_onoff)
+            button.draw_button(self.display)
+            button = Button('Salir', 150, 115, 250, 50, black, bright_red, 35, self.game_quit)
+            button.draw_button(self.display)
+            button = Button('Opciones', 800, 115, 250, 50, black, bright_orange, 35, self.game_options)
+            button.draw_button(self.display)
 
             # tasa de refresco
             pygame.display.update()
@@ -112,14 +75,18 @@ class Main:
 
             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
 
-            self.button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
+            juego = MainGame()
+
+            button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
+            button.draw_button(self.display)
+            button = Button('Jugar', 30, 400, 150, 50, black, bright_green, 35, juego.game_menu)
+            button.draw_button(self.display)
             text_surf, text_rect = text_render("Seleccion de Personajes", 'dolphins.ttf', 70)
             text_rect.center = (self.width / 2, 100)
             self.display.blit(text_surf, text_rect)
 
             pygame.display.update()
             self.clock.tick(20)
-
 
     def game_options(self):
          while True:
@@ -130,28 +97,14 @@ class Main:
 
              pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
 
-             self.button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
+             button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
+             button.draw_button(self.display)
              text_surf, text_rect = text_render("Opciones", 'dolphins.ttf', 70)
              text_rect.center = (self.width / 2, 100)
              self.display.blit(text_surf, text_rect)
 
              pygame.display.update()
              self.clock.tick(20)
-
-    def button(self, text, x, y, width, height, in_color, ac_color, size, action=None):
-        mouse = pygame.mouse.get_pos()
-        click = pygame.mouse.get_pressed()
-
-        if x + width > mouse[0] > x and y + height > mouse[1] > y:
-            pygame.draw.rect(self.display, ac_color, (x, y, width, height))
-            if click[0] == 1 and action is not None:
-                action()
-        else:
-            pygame.draw.rect(self.display, in_color, (x, y, width, height))
-
-        text_surf, text_rect = text_render(text, 'dolphins.ttf', size)
-        text_rect.center = ((x + (width / 2)), (y + (height / 2)))
-        self.display.blit(text_surf, text_rect)
 
     @staticmethod
     def game_quit():

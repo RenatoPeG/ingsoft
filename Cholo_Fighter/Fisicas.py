@@ -2,7 +2,8 @@ import pygame
 import os
 from pygame.locals import *
 from pygame.sprite import Sprite
-from Boton import *
+from Cholo_Fighter.Boton import *
+from Cholo_Fighter.Personaje import *
 
 
 black = (0, 0, 0)
@@ -111,12 +112,14 @@ class MainGame:
                     pygame.quit()
                     quit()
 
+            personaje1 = Personaje1()
+
             personaje.update()
             ataque.update()
-
             display.blit(fondo, (0, 0))
             display.blit(personaje.image, personaje.rect)
             display.blit(ataque.image, ataque.rect)
+            personaje1.health_bar(display)
 
             # botones
             # button('Salir', 1010, 25, 125, 50, black, bright_red, 35, self.game_quit)

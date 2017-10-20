@@ -2,10 +2,13 @@ import os
 # import sys
 import pygame
 from pygame.locals import *
-from Fisicas import *
-from TextMgmt import *
-from Music import *
-from Imagen import *
+
+from Cholo_Fighter.Boton import *
+from Cholo_Fighter.Fisicas import *
+from Cholo_Fighter.TextMgmt import *
+from Cholo_Fighter.Music import *
+from Cholo_Fighter.Imagen import *
+
 
 pygame.init()
 

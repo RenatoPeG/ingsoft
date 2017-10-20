@@ -15,8 +15,8 @@ def load_song(name):
 def music_onoff():
     if pygame.mixer.music.get_busy():
         print(pygame.mixer.music.get_busy())
-        pygame.mixer.music.pause()
+        pygame.mixer.music.stop()
         pygame.mixer.music.get_pos()
     else:
         print(pygame.mixer.music.get_busy())
-        pygame.mixer.music.unpause()
+        pygame.mixer.music.play()

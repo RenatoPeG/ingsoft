@@ -92,22 +92,22 @@ class Main:
             self.clock.tick(20)
 
     def game_options(self):
-         while True:
-             for event in pygame.event.get():
-                 if event.type == pygame.QUIT:
-                     pygame.quit()
-                     quit()
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    quit()
 
-             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
+            pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
 
-             button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
-             button.draw_button(self.display)
-             text_surf, text_rect = text_render("Opciones", 'dolphins.ttf', 70)
-             text_rect.center = (self.width / 2, 100)
-             self.display.blit(text_surf, text_rect)
+            button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
+            button.draw_button(self.display)
+            text_surf, text_rect = text_render("Opciones", 'dolphins.ttf', 70)
+            text_rect.center = (self.width / 2, 100)
+            self.display.blit(text_surf, text_rect)
 
-             pygame.display.update()
-             self.clock.tick(20)
+            pygame.display.update()
+            self.clock.tick(20)
 
     @staticmethod
     def game_quit():

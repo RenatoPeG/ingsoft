@@ -3,7 +3,7 @@ import os
 from pygame.locals import *
 from pygame.sprite import Sprite
 from Cholo_Fighter.Boton import *
-from Cholo_Fighter.Personaje import *
+# from Cholo_Fighter.Personaje import *
 
 
 black = (0, 0, 0)
@@ -35,7 +35,10 @@ def text_render(text, font, size):
 
 
 class Personaje(Sprite):
-    def __init__(self):
+    def __init__(self, nombre='', ataques='', vida=100):
+        self.nombre = nombre
+        self.ataques = ataques
+        self.vida = vida
         self.image = personaje = pygame.image.load("Imagenes/peluchin.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.move_ip(50, 51)
@@ -76,6 +79,15 @@ class Personaje(Sprite):
                 self.image = personaje = pygame.image.load("Imagenes/abajo.png").convert_alpha()
                 self.rect.y += 2
 
+    def health_bar(self, display):
+        pos = (20, 25, 400, 40)
+        bar_width = self.vida * 4
+        bar = (20, 25, bar_width, 40)
+
+        pygame.draw.rect(display, pygame.Color('white'), pos, 0)
+        pygame.draw.rect(display, pygame.Color('green'), bar, 0)
+        pygame.draw.rect(display, pygame.Color('black'), pos, 5)
+
 
 class Ataque(Sprite):
     def __init__(self):
@@ -112,14 +124,13 @@ class MainGame:
                     pygame.quit()
                     quit()
 
-            personaje1 = Personaje1()
 
             personaje.update()
             ataque.update()
             display.blit(fondo, (0, 0))
             display.blit(personaje.image, personaje.rect)
             display.blit(ataque.image, ataque.rect)
-            personaje1.health_bar(display)
+            personaje.health_bar(display)
 
             # botones
             # button('Salir', 1010, 25, 125, 50, black, bright_red, 35, self.game_quit)

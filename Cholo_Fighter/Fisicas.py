@@ -3,7 +3,6 @@ import os
 from pygame.locals import *
 from pygame.sprite import Sprite
 from Cholo_Fighter.Boton import *
-# from Cholo_Fighter.Personaje import *
 
 
 black = (0, 0, 0)
@@ -123,7 +122,6 @@ class MainGame:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     quit()
-
 
             personaje.update()
             ataque.update()

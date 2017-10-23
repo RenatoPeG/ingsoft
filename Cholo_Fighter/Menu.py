@@ -8,6 +8,7 @@ from Cholo_Fighter.Fisicas import *
 from Cholo_Fighter.TextMgmt import *
 from Cholo_Fighter.Music import *
 from Cholo_Fighter.Imagen import *
+from Cholo_Fighter.ConexionDB import *
 
 
 pygame.init()
@@ -70,6 +71,15 @@ class Main:
             self.clock.tick(20)
 
     def game_selection(self):
+        conn = create_connection()
+        with conn:
+            select_all_tasks(conn)
+            personajes = select_personajes(conn)
+
+        for pers in personajes:
+            print(pers.nombre)
+            print(pers.vida)
+
         while True:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -80,11 +90,21 @@ class Main:
 
             juego = MainGame()
 
+            for i in range(0, personajes.__len__()):
+                xpos = (self.width / personajes.__len__()) / 2 + (self.width / personajes.__len__()) * i  # (x/n)(i+0.5)
+                text_surf, text_rect = text_render(personajes[i].nombre, 'dolphins.ttf', 20)
+                text_rect.center = (xpos, 300)
+                self.display.blit(text_surf, text_rect)
+                text_surf, text_rect = text_render(str(personajes[i].vida), 'dolphins.ttf', 20)
+                text_rect.center = (xpos, 350)
+                self.display.blit(text_surf, text_rect)
+
             button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
             button.draw_button(self.display)
-            button = Button('Jugar', 30, 400, 150, 50, black, bright_green, 35, juego.game_menu)
+            button = Button('Jugar', (self.width-150)/2, 400, 150, 50, black, bright_green, 35, juego.game_menu)
             button.draw_button(self.display)
-            text_surf, text_rect = text_render("Seleccion de Personajes", 'dolphins.ttf', 70)
+
+            text_surf, text_rect = text_render('Seleccion de Personajes', 'dolphins.ttf', 70)
             text_rect.center = (self.width / 2, 100)
             self.display.blit(text_surf, text_rect)
 

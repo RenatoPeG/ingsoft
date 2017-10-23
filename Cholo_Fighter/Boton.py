@@ -1,5 +1,5 @@
 from pygame import *
-from TextMgmt import *
+from Cholo_Fighter.TextMgmt import *
 
 
 class Button:

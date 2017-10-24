@@ -5,6 +5,7 @@ from pygame.sprite import Sprite
 from Cholo_Fighter.Boton import *
 from Cholo_Fighter.TextMgmt import *
 from Cholo_Fighter.Colores import *
+# from Cholo_Fighter.Menu import *
 
 
 pygame.init()
@@ -17,9 +18,9 @@ display.fill(white)
 
 
 class Personaje(Sprite):
-    def __init__(self, nombre='', ataques='', vida=100):
+    def __init__(self, nombre='', vida=100):
         self.nombre = nombre
-        self.ataques = ataques
+        self.ataque = ''
         self.vida = vida
         self.image = personaje = pygame.image.load("Imagenes/peluchin.png").convert_alpha()
         self.rect = self.image.get_rect()
@@ -40,8 +41,8 @@ class Personaje(Sprite):
         elif ataque.rect.x > 860:
             self.image = personaje = pygame.image.load("Imagenes/peluchin.png").convert_alpha()
 
-        if teclas[K_s]:
-            self.image = personaje = pygame.image.load("Imagenes/patada.png").convert_alpha()
+        # if teclas[K_s]:
+        #     self.image = personaje = pygame.image.load("Imagenes/patada.png").convert_alpha()
 
         if teclas[K_LEFT]:
             self.image = personaje = pygame.image.load("Imagenes/izquierda.png").convert_alpha()
@@ -99,7 +100,10 @@ class MainGame:
         self.height = height
         self.clock = pygame.time.Clock()
 
-    def game_menu(self):
+    def game(self):
+        # menu = Main()
+        # pygame.mixer.music.stop()
+
         while 1:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -130,4 +134,4 @@ class MainGame:
 
 if __name__ == '__main__':
     MainWindow = MainGame()
-    MainWindow.game_menu()
+    MainWindow.game()

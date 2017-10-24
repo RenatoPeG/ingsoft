@@ -3,17 +3,9 @@ import os
 from pygame.locals import *
 from pygame.sprite import Sprite
 from Cholo_Fighter.Boton import *
+from Cholo_Fighter.TextMgmt import *
+from Cholo_Fighter.Colores import *
 
-
-black = (0, 0, 0)
-white = (255, 255, 255)
-red = (200, 0, 0)
-green = (0, 200, 0)
-blue = (0, 0, 200)
-bright_green = (0, 255, 0)
-bright_red = (255, 0, 0)
-bright_orange = (255, 100, 10)
-blue_bkg = (5, 116, 218)
 
 pygame.init()
 
@@ -22,15 +14,6 @@ display_height = 700
 display = pygame.display.set_mode((display_width, display_height))
 pygame.display.set_caption('Cholo Fighter')
 display.fill(white)
-
-
-def text_render(text, font, size):
-    font_btn = pygame.font.SysFont('Rosewood Std', 35)
-    # font_btn = pygame.font.Font(os.path.join('recursos', font), size)
-    text_surf = font_btn.render(text, True, white)
-    text_rect = text_surf.get_rect()
-
-    return text_surf, text_rect
 
 
 class Personaje(Sprite):

@@ -1,11 +1,11 @@
-import os
+# import os
 # import sys
-import pygame
-from pygame.locals import *
-
-from Cholo_Fighter.Boton import *
-from Cholo_Fighter.Fisicas import *
-from Cholo_Fighter.TextMgmt import *
+# import pygame
+# from pygame.locals import *
+#
+# from Cholo_Fighter.Boton import *
+# from Cholo_Fighter.Fisicas import *
+# from Cholo_Fighter.TextMgmt import *
 from Cholo_Fighter.Music import *
 from Cholo_Fighter.Imagen import *
 from Cholo_Fighter.ConexionDB import *
@@ -16,20 +16,9 @@ pygame.init()
 display_width = 1200
 display_height = 700
 
-black = (0, 0, 0)
-white = (255, 255, 255)
-red = (200, 0, 0)
-green = (0, 200, 0)
-blue = (0, 0, 200)
-bright_green = (0, 255, 0)
-bright_red = (255, 0, 0)
-bright_orange = (255, 100, 10)
-blue_bkg = (5, 116, 218)
-
 
 class Main:
     def __init__(self, width=display_width, height=display_height):
-        pygame.init()
         self.width = width
         self.height = height
         self.display = pygame.display.set_mode((self.width, self.height))
@@ -73,12 +62,7 @@ class Main:
     def game_selection(self):
         conn = create_connection()
         with conn:
-            select_all_tasks(conn)
             personajes = select_personajes(conn)
-
-        for pers in personajes:
-            print(pers.nombre)
-            print(pers.vida)
 
         while True:
             for event in pygame.event.get():
@@ -90,18 +74,26 @@ class Main:
 
             juego = MainGame()
 
+            # for i in range(0, personajes.__len__()):
+            #     xpos = (self.width / personajes.__len__()) / 2 + (self.width / personajes.__len__()) * i  # (x/n)(i+0.5)
+            #     # nombre
+            #     text_surf, text_rect = text_render(personajes[i].nombre, 'dolphins.ttf', 20)
+            #     text_rect.center = (xpos, 300)
+            #     self.display.blit(text_surf, text_rect)
+            #     #vida
+            #     text_surf, text_rect = text_render(str(personajes[i].vida), 'dolphins.ttf', 20)
+            #     text_rect.center = (xpos, 350)
+            #     self.display.blit(text_surf, text_rect)
+
             for i in range(0, personajes.__len__()):
-                xpos = (self.width / personajes.__len__()) / 2 + (self.width / personajes.__len__()) * i  # (x/n)(i+0.5)
-                text_surf, text_rect = text_render(personajes[i].nombre, 'dolphins.ttf', 20)
-                text_rect.center = (xpos, 300)
-                self.display.blit(text_surf, text_rect)
-                text_surf, text_rect = text_render(str(personajes[i].vida), 'dolphins.ttf', 20)
-                text_rect.center = (xpos, 350)
-                self.display.blit(text_surf, text_rect)
+                x_n = (self.width - 30 * 2) / personajes.__len__()
+                xpos = 30 + i * x_n
+                button = Button(personajes[i].nombre, xpos, 300, x_n, 50, black, bright_red, 27, None)
+                button.draw_button(self.display)
 
             button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
             button.draw_button(self.display)
-            button = Button('Jugar', (self.width-150)/2, 400, 150, 50, black, bright_green, 35, juego.game_menu)
+            button = Button('Jugar', (self.width-150)/2, 500, 150, 50, black, bright_green, 35, juego.game_menu)
             button.draw_button(self.display)
 
             text_surf, text_rect = text_render('Seleccion de Personajes', 'dolphins.ttf', 70)

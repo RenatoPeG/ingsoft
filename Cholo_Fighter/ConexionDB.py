@@ -43,9 +43,8 @@ def select_personajes(conn):
 
     for row in rows:
         nombre = row[1]
-        vida = row[2]
-        icono = row[3]
-        personaje = Personaje(nombre, '', vida)
+        icono = row[2]
+        personaje = Personaje(nombre)
         personajes.append(personaje)
 
     return personajes
@@ -55,9 +54,9 @@ def main():
     database = "C:\\Users\Renato\Documents\choloFighter\server\db.sqlite3"
 
     conn = create_connection(database)
-    with conn:
-        print("1. Query all tasks")
-        select_all_tasks(conn)
+    # with conn:
+    #     print("1. Query all tasks")
+    #     select_all_tasks(conn)
 
 
 if __name__ == '__main__':

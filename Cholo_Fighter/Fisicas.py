@@ -2,10 +2,12 @@ import pygame
 import os
 from pygame.locals import *
 from pygame.sprite import Sprite
-from Cholo_Fighter.Boton import *
-from Cholo_Fighter.TextMgmt import *
-from Cholo_Fighter.Colores import *
-
+# from Cholo_Fighter.Boton import *
+# from Cholo_Fighter.TextMgmt import *
+# from Cholo_Fighter.Colores import *
+from Boton import *
+from TextMgmt import *
+from Colores import *
 
 pygame.init()
 

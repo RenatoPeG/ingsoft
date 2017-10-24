@@ -1,20 +1,9 @@
-import pygame
-import os
+from pygame import *
+from TextMgmt import *
 
-#MODIFICAR CONTROL
-
-#Crear funcion que modifique control
 def modificar_control():
     pass
-#Atar funcion a los botones de configuracion de la pantalla
 
-
-
-
-#REESTABLECER PREDETERMINADOS
-
-
-#Crear diccionario de controles predeterminados
 class ControlesK():
     def __init__(self, mArriba, mAbajo, mIzquierda, mDerecha, saltar, gBasicoP, gBasicoS):
         self.mArriba = mArriba
@@ -25,20 +14,8 @@ class ControlesK():
         self.gBasicoP = gBasicoP
         self.gBasicoS = gBasicoS
         self.pBasico = [self.mArriba, self.mAbajo, self.gBasicoP]
-        self.pEspec = [self.mArriba, self.mAabajo, self.gBasicoS, self.mDerecha]
+        self.pEspec = [self.mArriba, self.mAbajo, self.gBasicoS, self.mDerecha]
 
-
-ctrlJ1 = ControlesK(K_UP, K_DOWN, K_LEFT, K_RIGHT, K_l, K_i, K_o)
-ctrlJ2 = ControlesK(K_r, K_f, K_d, K_g, K_x, K_a, K_s)
-
-#Implementar boton que aplique diccionario a botones predeterminados
-
-
-
-#CONFIGURAR OPCIONES DE JUEGO
-
-
-#Crear diccionario de opciones del juego
 class Opciones():
     def __init__(self, fullscreen, volume, tLimit, nRounds, ctrlJ1, ctrlJ2):
         self.fullscreen = fullscreen
@@ -48,11 +25,29 @@ class Opciones():
         self.ctrlJ1 = ctrlJ1
         self.ctrlJ2 = ctrlJ2
 
+class Toggler():
+    def __init__(self, display, x, y, width, height, font_size, color, focus_color, textIfTrue, textIfFalse, toggled):
+        self.x = x 
+        self.y = y
+        self.width = width
+        self.height = height
+        
+        mouse_pos = mouse.get_pos()
+        if self.x + self.width > mouse_pos[0] > self.x and self.y + self.height > mouse_pos[1] > self.y:
+            draw.rect(display, focus_color, (self.x, self.y, self.width, self.height))
+        else:
+            draw.rect(display, color, (self.x, self.y, self.width, self.height))
 
-gOptions = Opciones(false, 0.5, 180, 3, ctrlJ1, ctrlJ2)
+        text = None
+        if toggled:
+            text = textIfTrue
+        else:
+            text = textIfFalse
 
-#Maquetar pantalla de configuracion de opciones de juego
+        text_surf, text_rect = text_render(text, 'dolphins.ttf', font_size)
+        text_rect.center = ((self.x + (self.width / 2)), (self.y + (self.height / 2)))
+        display.blit(text_surf, text_rect)
 
-#Crear funcion que modifique una opciones
-
-#Atar funcion a los botones de configuracion de la pantalla
+    def mouseInBonudaries(self):
+        mouse_pos = mouse.get_pos()
+        return (self.x + self.width > mouse_pos[0] > self.x and self.y + self.height > mouse_pos[1] > self.y)

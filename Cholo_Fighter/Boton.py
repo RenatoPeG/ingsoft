@@ -1,6 +1,6 @@
 from pygame import *
-from Cholo_Fighter.TextMgmt import *
-
+# from Cholo_Fighter.TextMgmt import *
+from TextMgmt import *
 
 class Button:
     def __init__(self, text='', x=0, y=0, width=0, height=0, in_color='', ac_color='', size=0, action=None):

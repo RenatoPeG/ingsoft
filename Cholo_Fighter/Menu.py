@@ -1,34 +1,53 @@
 # import os
 # import sys
 # import pygame
-# from pygame.locals import *
-#
-# from Cholo_Fighter.Boton import *
-# from Cholo_Fighter.Fisicas import *
-# from Cholo_Fighter.TextMgmt import *
-from Cholo_Fighter.Music import *
-from Cholo_Fighter.Imagen import *
-from Cholo_Fighter.ConexionDB import *
-
+import Music
+from Imagen import *
+from ConexionDB import *
+from Opciones import *
 
 pygame.init()
 
-display_width = 1200
-display_height = 700
-
-
 class Main:
-    def __init__(self, width=display_width, height=display_height):
+    def __init__(self):
+        # Default display settings
+        self.defaultDisplayWidth = 1200
+        self.defaultDisplayHeight = 700
+
+        # Get monitor size info
+        displayInfo = pygame.display.Info()
+        self.monitorScreenWidth = displayInfo.current_w
+        self.monitorScreenHeight = displayInfo.current_h
+
+        # Set display starting configuration
+        self.currentDisplayWidth = self.defaultDisplayWidth
+        self.currentDisplayHeight = self.defaultDisplayHeight
+
+        # Initialize display
+        pygame.display.set_mode((self.currentDisplayWidth, self.currentDisplayHeight))
+        pygame.display.set_caption('Cholo Fighter')
+        pygame.display.fill(white)
+
+        # Play music
+        Music.loadSong('quiero_amanecer.mp3')
+        pygame.mixer.music.play(-1, 0.0)
+
         self.width = width
         self.height = height
+        fsInfo = pygame.display.Info()
+        self.fsWidth = fsInfo.current_w
+        self.fsHeight = fsInfo. current_h
         self.display = pygame.display.set_mode((self.width, self.height))
         self.clock = pygame.time.Clock()
         pygame.display.set_caption('Cholo Fighter')
         self.display.fill(white)
         load_song('quiero_amanecer.mp3')
         pygame.mixer.music.play(-1, 0.0)
+        ctrlJ1 = ControlesK(pygame.K_UP, pygame.K_DOWN, pygame.K_LEFT, pygame.K_RIGHT, pygame.K_l, pygame.K_i, pygame.K_o)
+        ctrlJ2 = ControlesK(pygame.K_r, pygame.K_f, pygame.K_d, pygame.K_g, pygame.K_x, pygame.K_a, pygame.K_s)
+        self.opciones = Opciones(False, 0.5, 180, 3, ctrlJ1, ctrlJ2);
 
-    def game_menu(self):
+    def gameMenu(self):
         while 1:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -105,19 +124,54 @@ class Main:
 
     def game_options(self):
         while True:
+            mousebuttonupPressed = False
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     quit()
+                elif event.type == pygame.MOUSEBUTTONUP:
+                    mousebuttonupPressed = True
+
 
             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
-
             button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
             button.draw_button(self.display)
+
+            text_surf, text_rect = label_render('Pantalla completa', 'dolphins.ttf', 36, 50, 200, 'topleft')
+            self.display.blit(text_surf, text_rect)
+            fsToggler = Toggler(self.display, display_width - 200, 200, 150, 30, 36, black, bright_orange, 'Sí', 'No', self.opciones.fullscreen)
+            if mousebuttonupPressed and fsToggler.mouseInBonudaries():
+                self.opciones.fullscreen = not self.opciones.fullscreen
+                if self.opciones.fullscreen:
+                    pygame.display.set_mode((self.fsWidth, self.fsHeight), pygame.FULLSCREEN)
+                else:
+                    pygame.display.set_mode((self.width, self.height))
+
+            text_surf, text_rect = label_render('Volumen', 'dolphins.ttf', 36, 50, 300, 'topleft')
+            self.display.blit(text_surf, text_rect)
+
+
+            text_surf, text_rect = label_render('Tiempo límite', 'dolphins.ttf', 36, 50, 400, 'topleft')
+            self.display.blit(text_surf, text_rect)
+
+
+            text_surf, text_rect = label_render('Número de rounds', 'dolphins.ttf', 36, 50, 500, 'topleft')
+            self.display.blit(text_surf, text_rect)
+
+
+            text_surf, text_rect = label_render('Controles Jugador 1', 'dolphins.ttf', 36, 50, 600, 'topleft')
+            self.display.blit(text_surf, text_rect)
+
+
+            text_surf, text_rect = label_render('Controles Jugador 2', 'dolphins.ttf', 36, 50, 700, 'topleft')
+            self.display.blit(text_surf, text_rect)           
+
+
+            
             text_surf, text_rect = text_render("Opciones", 'dolphins.ttf', 70)
             text_rect.center = (self.width / 2, 100)
             self.display.blit(text_surf, text_rect)
-
             pygame.display.update()
             self.clock.tick(20)
 

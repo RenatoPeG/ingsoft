@@ -1,8 +1,6 @@
 import sqlite3
 from sqlite3 import Error
-# from Cholo_Fighter.Fisicas import *
-from Fisicas import *
-
+from Cholo_Fighter.Fisicas import *
 
 def create_connection(db_file):
     try:

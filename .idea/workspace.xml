@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6d18293-7d38-41af-bcdc-0eae34d99f84" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cholo_Fighter/CholoFighter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Cholo_Fighter/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Boton.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/Boton.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Colores.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/Colores.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/ConexionDB.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/ConexionDB.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Fisicas.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagen.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/Imagen.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/AMOR.jpg" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/AMOR.jpg" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/Blanka.gif" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/Blanka.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/abajo.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/abajo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/arriba.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/arriba.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/atacando.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/atacando.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/ataque.gif" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/ataque.gif" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/derecha.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/derecha.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/izquierda.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/izquierda.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/parado.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/parado.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/patada.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/patada.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/peluchin.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/peluchin.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Imagenes/puñete.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Images/puñete.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Menu.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Music.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/Music.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Opciones.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/Opciones.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/TextMgmt.py" afterPath="$PROJECT_DIR$/Cholo_Fighter/Modules/TextMgmt.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/recursos/dolphins.ttf" afterPath="$PROJECT_DIR$/Cholo_Fighter/Resources/dolphins.ttf" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/recursos/logo.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Resources/logo.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/recursos/logo1.png" afterPath="$PROJECT_DIR$/Cholo_Fighter/Resources/logo1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/recursos/quiero_amanecer.mp3" afterPath="$PROJECT_DIR$/Cholo_Fighter/Resources/quiero_amanecer.mp3" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Cholo_Fighter/__init__.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

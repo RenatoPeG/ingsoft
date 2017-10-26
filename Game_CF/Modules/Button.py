@@ -1,6 +1,6 @@
 from pygame import *
 
-from Cholo_Fighter.Modules.TextMgmt import *
+from Game_CF.Modules.Text import *
 
 
 class Button:
@@ -29,3 +29,7 @@ class Button:
         text_surf, text_rect = text_render(self.text, 'dolphins.ttf', self.size)
         text_rect.center = ((self.x + (self.width / 2)), (self.y + (self.height / 2)))
         display.blit(text_surf, text_rect)
+
+    def mouse_in_boundaries(self):
+        mouse_pos = pygame.mouse.get_pos()
+        return self.x + self.width > mouse_pos[0] > self.x and self.y + self.height > mouse_pos[1] > self.y

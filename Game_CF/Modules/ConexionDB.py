@@ -1,17 +1,17 @@
 import sqlite3
 from sqlite3 import Error
 
-from Cholo_Fighter.Modules.Fisicas import *
+from Game_CF.Modules.Physics import *
 
 
-def create_connection(db_file):
-    try:
-        conn = sqlite3.connect(db_file)
-        return conn
-    except Error as e:
-        print(e)
-
-    return None
+# def create_connection(db_file):
+#     try:
+#         conn = sqlite3.connect(db_file)
+#         return conn
+#     except Error as e:
+#         print(e)
+#
+#     return None
 
 
 def create_connection():
@@ -44,7 +44,7 @@ def select_personajes(conn):
 
     for row in rows:
         nombre = row[1]
-        icono = row[2]
+        # icono = row[2]
         personaje = Personaje(nombre)
         personajes.append(personaje)
 

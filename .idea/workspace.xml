@@ -2,7 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f6d18293-7d38-41af-bcdc-0eae34d99f84" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Cholo_Fighter/__init__.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Game_CF/Modules/Keys.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/.idea/Cholo_Fighter.iml" afterPath="$PROJECT_DIR$/Game_CF/.idea/Cholo_Fighter.iml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/Game_CF/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/.idea/misc.xml" afterPath="$PROJECT_DIR$/Game_CF/.idea/misc.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/.idea/modules.xml" afterPath="$PROJECT_DIR$/Game_CF/.idea/modules.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/.idea/vcs.xml" afterPath="$PROJECT_DIR$/Game_CF/.idea/vcs.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/.idea/workspace.xml" afterPath="$PROJECT_DIR$/Game_CF/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/CholoFighter.py" afterPath="$PROJECT_DIR$/Game_CF/CholoFighter.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/AMOR.jpg" afterPath="$PROJECT_DIR$/Game_CF/Images/AMOR.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/Blanka.gif" afterPath="$PROJECT_DIR$/Game_CF/Images/Blanka.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/abajo.png" afterPath="$PROJECT_DIR$/Game_CF/Images/abajo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/arriba.png" afterPath="$PROJECT_DIR$/Game_CF/Images/arriba.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/atacando.png" afterPath="$PROJECT_DIR$/Game_CF/Images/atacando.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/ataque.gif" afterPath="$PROJECT_DIR$/Game_CF/Images/ataque.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/derecha.png" afterPath="$PROJECT_DIR$/Game_CF/Images/derecha.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/izquierda.png" afterPath="$PROJECT_DIR$/Game_CF/Images/izquierda.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/parado.png" afterPath="$PROJECT_DIR$/Game_CF/Images/parado.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/patada.png" afterPath="$PROJECT_DIR$/Game_CF/Images/patada.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/peluchin.png" afterPath="$PROJECT_DIR$/Game_CF/Images/peluchin.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Images/puñete.png" afterPath="$PROJECT_DIR$/Game_CF/Images/puñete.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/Boton.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Button.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/Colores.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Colors.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/ConexionDB.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/ConexionDB.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Physics.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/Imagen.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Image.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Menu.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/Music.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Music.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/Opciones.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Options.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Modules/TextMgmt.py" afterPath="$PROJECT_DIR$/Game_CF/Modules/Text.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Resources/dolphins.ttf" afterPath="$PROJECT_DIR$/Game_CF/Resources/dolphins.ttf" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Resources/logo.png" afterPath="$PROJECT_DIR$/Game_CF/Resources/logo.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Resources/logo1.png" afterPath="$PROJECT_DIR$/Game_CF/Resources/logo1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Cholo_Fighter/Resources/quiero_amanecer.mp3" afterPath="$PROJECT_DIR$/Game_CF/Resources/quiero_amanecer.mp3" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Documentacion/DICCIONARIO OPCIONES Y KEYCONFIG.txt" afterPath="$PROJECT_DIR$/Documentation/DICCIONARIO OPCIONES Y KEYCONFIG.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Documentacion/Diagrama de despliegue.mdj" afterPath="$PROJECT_DIR$/Documentation/Diagrama de despliegue.mdj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,7 +52,7 @@
     <SUITE FILE_PATH="coverage/choloFighter$Boton.coverage" NAME="Boton Coverage Results" MODIFIED="1508372800872" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cholo_Fighter" />
     <SUITE FILE_PATH="coverage/choloFighter$Fisicas.coverage" NAME="Fisicas Coverage Results" MODIFIED="1508720179277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cholo_Fighter" />
     <SUITE FILE_PATH="coverage/choloFighter$ConexionDB.coverage" NAME="ConexionDB Coverage Results" MODIFIED="1508720490410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cholo_Fighter" />
-    <SUITE FILE_PATH="coverage/choloFighter$CholoFighter.coverage" NAME="CholoFighter Coverage Results" MODIFIED="1509037638658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cholo_Fighter" />
+    <SUITE FILE_PATH="coverage/choloFighter$CholoFighter.coverage" NAME="CholoFighter Coverage Results" MODIFIED="1509045110105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Game_CF" />
     <SUITE FILE_PATH="coverage/choloFighter$Fisicas__1_.coverage" NAME="Fisicas (1) Coverage Results" MODIFIED="1508475024764" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cholo_Fighter" />
     <SUITE FILE_PATH="coverage/choloFighter$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1509037412736" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Cholo_Fighter" />
   </component>
@@ -50,49 +85,70 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Menu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py">
+      <file leaf-file-name="Menu.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="10" />
+            <state relative-caret-position="3213">
+              <caret line="145" column="52" lean-forward="false" selection-start-line="145" selection-start-column="52" selection-end-line="145" selection-end-column="52" />
               <folding>
-                <element signature="e#73#114#0" expanded="true" />
-                <element signature="e#4115#4748#0" expanded="false" />
-                <element signature="e#4797#4825#0" expanded="false" />
+                <element signature="e#186#226#0" expanded="true" />
+                <element signature="e#10984#11012#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fisicas.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py">
+      <file leaf-file-name="Music.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Music.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="24">
-              <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+            <state relative-caret-position="624">
+              <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Options.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Options.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-889">
+              <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Button.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Button.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="622">
+              <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="ConexionDB.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/ConexionDB.py">
+        <entry file="file://$PROJECT_DIR$/Game_CF/Modules/ConexionDB.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1032">
+              <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1509037319617" expanded="true" signature="546:574" ph="SELECT * FRO... menu_personaje" />
-                <marker date="1509037319617" expanded="true" signature="737:765" ph="SELECT * FRO... menu_personaje" />
+                <marker date="1509039872819" expanded="true" signature="555:583" ph="SELECT * FRO... menu_personaje" />
+                <marker date="1509039872819" expanded="true" signature="746:774" ph="SELECT * FRO... menu_personaje" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CholoFighter.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cholo_Fighter/CholoFighter.py">
+      <file leaf-file-name="CholoFighter.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game_CF/CholoFighter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="408">
+              <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -114,6 +170,10 @@
       <find>Color</find>
       <find>pygame.color</find>
       <find>ataque</find>
+      <find>configured</find>
+      <find>regresar</find>
+      <find>self.music</find>
+      <find>volume</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -136,6 +196,15 @@
         <option value="$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py" />
         <option value="$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py" />
         <option value="$PROJECT_DIR$/Cholo_Fighter/CholoFighter.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/Keys.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/Text.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/ConexionDB.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/Image.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/Button.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/Options.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/Music.py" />
+        <option value="$PROJECT_DIR$/Game_CF/CholoFighter.py" />
+        <option value="$PROJECT_DIR$/Game_CF/Modules/Menu.py" />
       </list>
     </option>
   </component>
@@ -165,6 +234,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -175,24 +245,23 @@
             <path>
               <item name="choloFighter" type="b2602c69:ProjectViewProjectNode" />
               <item name="choloFighter" type="462c0819:PsiDirectoryNode" />
-              <item name="Cholo_Fighter" type="462c0819:PsiDirectoryNode" />
+              <item name="Game_CF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="choloFighter" type="b2602c69:ProjectViewProjectNode" />
               <item name="choloFighter" type="462c0819:PsiDirectoryNode" />
-              <item name="Cholo_Fighter" type="462c0819:PsiDirectoryNode" />
+              <item name="Game_CF" type="462c0819:PsiDirectoryNode" />
               <item name="Modules" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -224,13 +293,13 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cholo_Fighter" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Game_CF" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="choloFighter" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cholo_Fighter/CholoFighter.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Game_CF/CholoFighter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -357,24 +426,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.3254717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2567132" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2604726" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -388,52 +459,42 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="44" column="23" lean-forward="true" selection-start-line="44" selection-start-column="23" selection-end-line="44" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#73#114#0" expanded="true" />
-            <element signature="e#4115#4748#0" expanded="false" />
-            <element signature="e#4797#4825#0" expanded="false" />
+            <element signature="e#186#226#0" expanded="true" />
+            <element signature="e#10984#11012#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Personaje.py" />
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
           <folding>
-            <element signature="e#73#114#0" expanded="true" />
-            <element signature="e#4115#4748#0" expanded="false" />
-            <element signature="e#4797#4825#0" expanded="false" />
+            <element signature="e#186#226#0" expanded="true" />
+            <element signature="e#10984#11012#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Imagen.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Image.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
           <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Physics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2208">
           <caret line="96" column="56" lean-forward="false" selection-start-line="96" selection-start-column="56" selection-end-line="96" selection-end-column="56" />
@@ -441,7 +502,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Boton.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Button.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="29" column="8" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
@@ -449,33 +510,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/TextMgmt.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Music.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Music.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#73#114#0" expanded="true" />
-            <element signature="e#4115#4748#0" expanded="false" />
-            <element signature="e#4797#4825#0" expanded="false" />
+            <element signature="e#186#226#0" expanded="true" />
+            <element signature="e#10984#11012#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Boton.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Button.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
@@ -483,7 +543,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Physics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3216">
           <caret line="138" column="27" lean-forward="false" selection-start-line="138" selection-start-column="27" selection-end-line="138" selection-end-column="27" />
@@ -491,26 +551,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/TextMgmt.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Text.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3792">
           <caret line="162" column="14" lean-forward="false" selection-start-line="144" selection-start-column="4" selection-end-line="162" selection-end-column="14" />
           <folding>
-            <element signature="e#73#114#0" expanded="true" />
-            <element signature="e#4115#4748#0" expanded="false" />
-            <element signature="e#4797#4825#0" expanded="false" />
+            <element signature="e#186#226#0" expanded="true" />
+            <element signature="e#10984#11012#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Physics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2280">
           <caret line="98" column="60" lean-forward="true" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
@@ -518,7 +577,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Boton.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Button.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="26" column="70" lean-forward="false" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
@@ -526,14 +585,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#73#114#0" expanded="true" />
-            <element signature="e#4115#4748#0" expanded="false" />
-            <element signature="e#4797#4825#0" expanded="false" />
+            <element signature="e#186#226#0" expanded="true" />
+            <element signature="e#10984#11012#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -548,36 +606,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Documentacion/Diagrama de despliegue.mdj">
+    <entry file="file://$PROJECT_DIR$/Documentation/Diagrama de despliegue.mdj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/.idea/misc.xml">
+    <entry file="file://$PROJECT_DIR$/Game_CF/.idea/misc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Images/atacando.png">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Images/atacando.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Images/arriba.png">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Images/arriba.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Images/abajo.png">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Images/abajo.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Documentacion/DICCIONARIO OPCIONES Y KEYCONFIG.txt">
+    <entry file="file://$PROJECT_DIR$/Documentation/DICCIONARIO OPCIONES Y KEYCONFIG.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-218">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -585,7 +643,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Personaje.py" />
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Resources/logo.png">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Resources/logo.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -657,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="217" column="0" lean-forward="false" selection-start-line="217" selection-start-column="0" selection-end-line="217" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,22 +725,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Opciones.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Imagen.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Images/peluchin.png">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Images/peluchin.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -695,88 +737,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/TextMgmt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/menu/static/images/judas_ico.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Colores.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="16" column="18" lean-forward="true" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Music.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Boton.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Fisicas.py">
+    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/__init__.py" />
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Physics.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
-          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/ConexionDB.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Keys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="676">
+          <caret line="143" column="0" lean-forward="true" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/ConexionDB.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1032">
+          <caret line="46" column="10" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1509037319617" expanded="true" signature="546:574" ph="SELECT * FRO... menu_personaje" />
-            <marker date="1509037319617" expanded="true" signature="737:765" ph="SELECT * FRO... menu_personaje" />
+            <marker date="1509039872819" expanded="true" signature="555:583" ph="SELECT * FRO... menu_personaje" />
+            <marker date="1509039872819" expanded="true" signature="746:774" ph="SELECT * FRO... menu_personaje" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/Modules/Menu.py">
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Image.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="10" />
-          <folding>
-            <element signature="e#73#114#0" expanded="true" />
-            <element signature="e#4115#4748#0" expanded="false" />
-            <element signature="e#4797#4825#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cholo_Fighter/CholoFighter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="504">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Colors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Text.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Button.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="32" column="21" lean-forward="true" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/CholoFighter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Options.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-889">
+          <caret line="51" column="12" lean-forward="false" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Music.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Game_CF/Modules/Menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3213">
+          <caret line="145" column="52" lean-forward="false" selection-start-line="145" selection-start-column="52" selection-end-line="145" selection-end-column="52" />
+          <folding>
+            <element signature="e#186#226#0" expanded="true" />
+            <element signature="e#10984#11012#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

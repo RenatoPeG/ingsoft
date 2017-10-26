@@ -1,11 +1,11 @@
 import pygame
-from Cholo_Fighter.Modules.Colores import *
-from Cholo_Fighter.Modules.TextMgmt import *
+from Game_CF.Modules.Colors import *
+from Game_CF.Modules.Text import *
 from pygame.sprite import Sprite
 
-from Cholo_Fighter.Modules.Boton import *
+from Game_CF.Modules.Button import *
 
-# from Cholo_Fighter.Menu import *
+# from Game_CF.Menu import *
 
 
 pygame.init()

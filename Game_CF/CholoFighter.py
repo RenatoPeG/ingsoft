@@ -1,11 +1,12 @@
-from Cholo_Fighter.Modules.Menu import *
+from Game_CF.Modules.Menu import *
 
 
 class Game:
     def __init__(self):
         pass
 
-    def start_game(self):
+    @staticmethod
+    def start_game():
         menu = Menu()
 
         # Loading game

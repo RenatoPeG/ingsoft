@@ -3,14 +3,14 @@
 # import pygame
 # from pygame.locals import *
 #
-from Cholo_Fighter.Boton import *
-from Cholo_Fighter.Fisicas import *
-from Cholo_Fighter.TextMgmt import *
-from Cholo_Fighter.Music import *
-from Cholo_Fighter.Imagen import *
-from Cholo_Fighter.ConexionDB import *
-from Cholo_Fighter.Colores import *
+from Cholo_Fighter.Modules.Boton import *
+from Cholo_Fighter.Modules.Colores import *
+from Cholo_Fighter.Modules.ConexionDB import *
+from Cholo_Fighter.Modules.Fisicas import *
+from Cholo_Fighter.Modules.Imagen import *
+from Cholo_Fighter.Modules.TextMgmt import *
 
+from Cholo_Fighter.Modules.Music import *
 
 pygame.init()
 
@@ -18,7 +18,7 @@ display_width = 1200
 display_height = 700
 
 
-class Main:
+class Menu:
     def __init__(self, width=display_width, height=display_height):
         self.width = width
         self.height = height
@@ -129,5 +129,5 @@ class Main:
 
 
 if __name__ == '__main__':
-    MainWindow = Main()
+    MainWindow = Menu()
     MainWindow.game_menu()

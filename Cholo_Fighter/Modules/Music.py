@@ -3,7 +3,7 @@ import pygame
 
 
 def load_song(name):
-    fullname = os.path.join('recursos')
+    fullname = os.path.join('Resources')
     fullname = os.path.join(fullname, name)
     try:
         pygame.mixer.music.load(fullname)

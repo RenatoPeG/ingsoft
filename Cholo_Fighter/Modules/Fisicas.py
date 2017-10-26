@@ -1,10 +1,10 @@
 import pygame
-import os
-from pygame.locals import *
+from Cholo_Fighter.Modules.Colores import *
+from Cholo_Fighter.Modules.TextMgmt import *
 from pygame.sprite import Sprite
-from Cholo_Fighter.Boton import *
-from Cholo_Fighter.TextMgmt import *
-from Cholo_Fighter.Colores import *
+
+from Cholo_Fighter.Modules.Boton import *
+
 # from Cholo_Fighter.Menu import *
 
 
@@ -22,7 +22,7 @@ class Personaje(Sprite):
         self.nombre = nombre
         self.ataque = ''
         self.vida = vida
-        self.image = personaje = pygame.image.load("Imagenes/peluchin.png").convert_alpha()
+        self.image = personaje = pygame.image.load("Images/peluchin.png").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.move_ip(50, 51)
         self.muerto = 0
@@ -30,36 +30,36 @@ class Personaje(Sprite):
     def update(self):
         teclas = pygame.key.get_pressed()
         if teclas[K_SPACE]:
-            self.image = personaje = pygame.image.load("Imagenes/atacando.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/atacando.png").convert_alpha()
         elif ataque.rect.x > 860:
-            self.image = personaje = pygame.image.load("Imagenes/peluchin.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/peluchin.png").convert_alpha()
 
         if teclas[K_a]:
-            self.image = personaje = pygame.image.load("Imagenes/puñete.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/puñete.png").convert_alpha()
         elif teclas[K_s]:
-            self.image = personaje = pygame.image.load("Imagenes/patada.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/patada.png").convert_alpha()
         elif ataque.rect.x > 860:
-            self.image = personaje = pygame.image.load("Imagenes/peluchin.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/peluchin.png").convert_alpha()
 
         # if teclas[K_s]:
-        #     self.image = personaje = pygame.image.load("Imagenes/patada.png").convert_alpha()
+        #     self.image = personaje = pygame.image.load("Images/patada.png").convert_alpha()
 
         if teclas[K_LEFT]:
-            self.image = personaje = pygame.image.load("Imagenes/izquierda.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/izquierda.png").convert_alpha()
             if self.rect.x > 0:
                 self.rect.x -= 2
         elif teclas[K_RIGHT]:
-            self.image = personaje = pygame.image.load("Imagenes/derecha.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/derecha.png").convert_alpha()
             if self.rect.x < 1000:
                 self.rect.x += 2
 
         if teclas[K_UP]:
-            self.image = personaje = pygame.image.load("Imagenes/arriba.png").convert_alpha()
+            self.image = personaje = pygame.image.load("Images/arriba.png").convert_alpha()
             if self.rect.y > 0:
                 self.rect.y -= 2
         elif teclas[K_DOWN]:
             if self.rect.y < 480:
-                self.image = personaje = pygame.image.load("Imagenes/abajo.png").convert_alpha()
+                self.image = personaje = pygame.image.load("Images/abajo.png").convert_alpha()
                 self.rect.y += 2
 
     def health_bar(self, display):
@@ -74,7 +74,7 @@ class Personaje(Sprite):
 
 class Ataque(Sprite):
     def __init__(self):
-        self.image = ataque = pygame.image.load("Imagenes/ataque.gif").convert_alpha()
+        self.image = ataque = pygame.image.load("Images/ataque.gif").convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.move_ip(1000, 1500)
 
@@ -90,7 +90,7 @@ class Ataque(Sprite):
 
 personaje = Personaje()
 ataque = Ataque()
-fondo = pygame.image.load("Imagenes/AMOR.jpg").convert()
+fondo = pygame.image.load("Images/AMOR.jpg").convert()
 
 
 class MainGame:

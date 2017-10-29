@@ -10,11 +10,7 @@ from Game_CF.Modules.Button import *
 
 pygame.init()
 
-display_width = 1200
-display_height = 700
-display = pygame.display.set_mode((display_width, display_height))
-pygame.display.set_caption('Cholo Fighter')
-display.fill(white)
+display1 = pygame.display.set_mode((0, 0))
 
 
 class Personaje(Sprite):
@@ -67,9 +63,9 @@ class Personaje(Sprite):
         bar_width = self.vida * 4
         bar = (20, 25, bar_width, 40)
 
-        pygame.draw.rect(display, pygame.Color('white'), pos, 0)
-        pygame.draw.rect(display, pygame.Color('green'), bar, 0)
-        pygame.draw.rect(display, pygame.Color('black'), pos, 5)
+        pygame.draw.rect(display1, pygame.Color('white'), pos, 0)
+        pygame.draw.rect(display1, pygame.Color('green'), bar, 0)
+        pygame.draw.rect(display1, pygame.Color('black'), pos, 5)
 
 
 class Ataque(Sprite):
@@ -94,16 +90,12 @@ fondo = pygame.image.load("Images/AMOR.jpg").convert()
 
 
 class MainGame:
-    def __init__(self, width=display_width, height=display_height):
+    def __init__(self, display):
         pygame.init()
-        self.width = width
-        self.height = height
+        self.display = display
         self.clock = pygame.time.Clock()
 
     def game(self):
-        # menu = Main()
-        # pygame.mixer.music.stop()
-
         while 1:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
@@ -112,15 +104,15 @@ class MainGame:
 
             personaje.update()
             ataque.update()
-            display.blit(fondo, (0, 0))
-            display.blit(personaje.image, personaje.rect)
-            display.blit(ataque.image, ataque.rect)
+            self.display.blit(fondo, (0, 0))
+            self.display.blit(personaje.image, personaje.rect)
+            self.display.blit(ataque.image, ataque.rect)
             personaje.health_bar(display)
 
             # botones
             # button('Salir', 1010, 25, 125, 50, black, bright_red, 35, self.game_quit)
             button = Button('Salir', 1010, 25, 125, 50, black, bright_red, 35, self.game_quit)
-            button.draw_button(display)
+            button.draw_button(self.display)
 
             # tasa de refresco
             pygame.display.update()

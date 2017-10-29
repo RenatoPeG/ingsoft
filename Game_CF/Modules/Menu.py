@@ -46,12 +46,11 @@ class Menu:
 
             # fondo
             pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
-            # pygame.draw.rect(self.display, blue_bkg, (30, 185, 1140, 485))
 
             # muestra la imagen
             logo_surf, logo_rect = load_image('logo.png')
-            y = display_height * 0.65
-            logo_rect.center = (display_width / 2, y)
+            y = self.current_display_height * 0.65
+            logo_rect.center = (self.current_display_width / 2, y)
             self.display.blit(logo_surf, logo_rect)
 
             # botones
@@ -73,7 +72,7 @@ class Menu:
         with conn:
             personajes = select_personajes(conn)
 
-        juego = MainGame()
+        juego = MainGame(self.display)
 
         while True:
             for event in pygame.event.get():
@@ -81,7 +80,9 @@ class Menu:
                     pygame.quit()
                     quit()
 
-            pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
+            self.display.fill(white)
+            pygame.draw.rect(self.display, black,
+                             (20, 20, self.current_display_width - 40, self.current_display_height - 40))
 
             # for i in range(0, personajes.__len__()):
             #     xpos = (self.width / personajes.__len__()) / 2 + (self.width / personajes.__len__()) * i  # (x/n)(i+0.5)
@@ -102,7 +103,8 @@ class Menu:
 
             button = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
             button.draw_button(self.display)
-            button = Button('Jugar', (self.current_display_width - 150) / 2, 500, 150, 50, black, bright_green, 35, juego.game)
+            button = Button('Jugar', (self.current_display_width - 150) / 2, 500, 150, 50, black, bright_green, 35,
+                            juego.game)
             button.draw_button(self.display)
 
             text_surf, text_rect = text_render('Seleccion de Personajes', 'dolphins.ttf', 70)
@@ -133,14 +135,17 @@ class Menu:
             button_back = Button('Regresar', 30, 30, 150, 30, black, bright_orange, 20, self.game_menu)
             button_back.draw_button(self.display)
 
-            button_defaults = Button('Reestablecer', self.current_display_width - 180, 30, 150, 30, black, bright_orange, 20, None)
+            button_defaults = Button('Reestablecer', self.current_display_width - 180, 30, 150, 30, black,
+                                     bright_orange, 20, None)
             button_defaults.draw_button(self.display)
 
-            Text.render_label('Opciones', 'white', 'dolphins.ttf', 70, self.current_display_width / 2, 100, '', self.display)
+            Text.render_label('Opciones', 'white', 'dolphins.ttf', 70, self.current_display_width / 2, 100, '',
+                              self.display)
 
             Text.render_label('Pantalla completa', 'white', 'dolphins.ttf', 36, 50, 200, 'topleft', self.display)
             toggler_fullscreen = Option.Toggler('Sí', 'No', 'white', 'dolphins.ttf', 36, black, bright_orange,
-                                                self.current_display_width - 200, 200, 150, 50, Option.fullscreen, self.display)
+                                                self.current_display_width - 200, 200, 150, 50, Option.fullscreen,
+                                                self.display)
 
             Text.render_label('Volumen', 'white', 'dolphins.ttf', 36, 50, 275, 'topleft', self.display)
             numeric_up_down_volume = Option.NumericUpDown(str(int(Option.volume * 100)) + '%', 'white', 'dolphins.ttf',
@@ -157,12 +162,12 @@ class Menu:
                                                           red, self.current_display_width - 205, 425, 30, self.display)
 
             Text.render_label('Controles Jugador 1', 'white', 'dolphins.ttf', 36, 50, 500, 'topleft', self.display)
-            button_configure_player1 = Button('Configurar', self.current_display_width - 245, 500, 200, 50, black, blue, 36,
-                                              self.display)
+            button_configure_player1 = Button('Configurar', self.current_display_width - 245, 500, 200, 50, black, blue,
+                                              36, self.display)
 
             Text.render_label('Controles Jugador 2', 'white', 'dolphins.ttf', 36, 50, 575, 'topleft', self.display)
-            button_configure_player2 = Button('Configurar', self.current_display_width - 245, 575, 200, 50, black, blue, 36,
-                                              self.display)
+            button_configure_player2 = Button('Configurar', self.current_display_width - 245, 575, 200, 50, black, blue,
+                                              36, self.display)
 
             # Listen for button clicked
             if mousebuttonup_triggered:
@@ -184,8 +189,7 @@ class Menu:
                     if Option.fullscreen:
                         self.current_display_width = self.monitor_screen_width
                         self.current_display_height = self.monitor_sreen_height
-                        pygame.display.set_mode((self.current_display_width, self.current_display_height),
-                                                pygame.FULLSCREEN)
+                        pygame.display.set_mode((self.current_display_width, self.current_display_height), FULLSCREEN)
                     else:
                         self.current_display_width = self.default_display_width
                         self.current_display_height = self.default_display_height

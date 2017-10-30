@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    font-family: "Rosewood Std Regular", sans-serif;
+    font-size: 3em;
+    color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.th_ico {
+    width: 200px;
+    height: 200px;
+}
+
+.table {
+    font-family: "Lato";
+}

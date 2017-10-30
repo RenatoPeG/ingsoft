@@ -6,6 +6,7 @@
 # from Game_CF.Modules.Button import *
 # from Game_CF.Modules.Colors import *
 # from Game_CF.Modules import Text
+import ctypes
 from Game_CF.Modules.ConexionDB import *
 from Game_CF.Modules.Physics import *
 from Game_CF.Modules.Image import *
@@ -17,6 +18,9 @@ pygame.init()
 
 class Menu:
     def __init__(self):
+        ctypes.windll.user32.SetProcessDPIAware()
+        # true_res = (ctypes.windll.user32.GetSystemMetrics(0), ctypes.windll.user32.GetSystemMetrics(1))
+        # pygame.display.set_mode(true_res, FULLSCREEN)
         self.default_display_width = 1200
         self.default_display_height = 700
 
@@ -45,7 +49,9 @@ class Menu:
                     quit()
 
             # fondo
-            pygame.draw.rect(self.display, black, (20, 20, 1160, 660))
+            self.display.fill(white)
+            pygame.draw.rect(self.display, black,
+                             (20, 20, self.current_display_width - 40, self.current_display_height - 40))
 
             # muestra la imagen
             logo_surf, logo_rect = load_image('logo.png')
@@ -54,13 +60,18 @@ class Menu:
             self.display.blit(logo_surf, logo_rect)
 
             # botones
-            button = Button('Jugar', 150, 45, 250, 50, black, bright_green, 35, self.game_selection)
+            font_btn_size = int(self.current_display_width * 0.029167)
+            button = Button('Jugar', self.current_display_width * 0.333 - 250, self.current_display_height * 0.143 - 50,
+                            250, 50, black, bright_green, font_btn_size, self.game_selection)
             button.draw_button(self.display)
-            button = Button('Musica', 800, 45, 250, 50, black, bright_orange, 35, Music.music_onoff)
+            button = Button('Musica', self.current_display_width * 0.666, self.current_display_height * 0.143 - 50, 250,
+                            50, black, bright_orange, font_btn_size, Music.music_onoff)
             button.draw_button(self.display)
-            button = Button('Salir', 150, 115, 250, 50, black, bright_red, 35, self.game_quit)
+            button = Button('Salir', self.current_display_width * 0.333 - 250, self.current_display_height * 0.243 - 50,
+                            250, 50, black, bright_red, font_btn_size, self.game_quit)
             button.draw_button(self.display)
-            button = Button('Opciones', 800, 115, 250, 50, black, bright_orange, 35, self.game_options)
+            button = Button('Opciones', self.current_display_width * 0.666, self.current_display_height * 0.243 - 50,
+                            250, 50, black, bright_orange, font_btn_size, self.game_options)
             button.draw_button(self.display)
 
             # tasa de refresco
@@ -83,17 +94,6 @@ class Menu:
             self.display.fill(white)
             pygame.draw.rect(self.display, black,
                              (20, 20, self.current_display_width - 40, self.current_display_height - 40))
-
-            # for i in range(0, personajes.__len__()):
-            #     xpos = (self.width / personajes.__len__()) / 2 + (self.width / personajes.__len__()) * i  # (x/n)(i+0.5)
-            #     # nombre
-            #     text_surf, text_rect = text_render(personajes[i].nombre, 'dolphins.ttf', 20)
-            #     text_rect.center = (xpos, 300)
-            #     self.display.blit(text_surf, text_rect)
-            #     #vida
-            #     text_surf, text_rect = text_render(str(personajes[i].vida), 'dolphins.ttf', 20)
-            #     text_rect.center = (xpos, 350)
-            #     self.display.blit(text_surf, text_rect)
 
             for i in range(0, personajes.__len__()):
                 x_n = (self.current_display_width - 30 * 2) / personajes.__len__()

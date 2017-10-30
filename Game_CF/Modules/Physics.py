@@ -1,11 +1,9 @@
 import pygame
-from Game_CF.Modules.Colors import *
 from Game_CF.Modules.Text import *
-from pygame.sprite import Sprite
-
-from Game_CF.Modules.Button import *
-
 # from Game_CF.Menu import *
+from Game_CF.Modules.Colors import *
+from pygame.sprite import Sprite
+from Game_CF.Modules.Button import *
 
 
 pygame.init()
